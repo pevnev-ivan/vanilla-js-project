@@ -1,14 +1,15 @@
 import React from 'react';
 import './App.css';
-import {student} from "./02/02";
+import LessonFive from "./57-5/lesson5";
 
 function App() {
 
 
-  console.log(student)
+
 
   return (
     <div className="App">
+<LessonFive/>
 
     </div>
   );
