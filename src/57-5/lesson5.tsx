@@ -1,4 +1,5 @@
 import React from 'react';
+import {Accordion, AccordionDetails, AccordionSummary, Container, Paper, Typography} from "@mui/material";
 
 //1. Sort - mutable method
 //2. Sort - returns link to reference array
@@ -64,8 +65,16 @@ const LessonFive = () => {
     }
 
     return (
-        <div>
-            <h3>JS_#05 2022-08-18 </h3>
+
+        <div >
+            <Container maxWidth="sm" style={{padding: '20px'}} >
+                <Accordion>
+                    <AccordionSummary>
+                        <Typography><h3>JS_#05 2022-08-18 </h3></Typography>
+                    </AccordionSummary>
+                    <AccordionDetails>
+
+
             <div>Sort function:</div>
 
             Initial array : {names.map(e => e + ' ')} <br/>
@@ -92,6 +101,11 @@ const LessonFive = () => {
                 Initial array: {nums.map(e => e + ' ')} <br/>
                 My bubble sort: {bubbleSort(nums)}
             </div>
+
+
+                    </AccordionDetails>
+                </Accordion>
+            </Container>
         </div>
     );
 };
