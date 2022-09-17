@@ -3,6 +3,49 @@ import {Accordion, AccordionDetails, AccordionSummary, Container, Typography} fr
 
 const LessonSix = () => {
 
+    let man = {
+        name: 'John',
+        age: 28,
+        mother: {
+            name: "Kate",
+            age: 50,
+            work: {
+                position: "doctor",
+                experience: 15
+            },
+            parents: [
+                {
+                    name: "Kevin",
+                    age: 80,
+                    favoriteDish: {
+                        title: "borscht",
+                        ingredients: [
+                            {title: "beet", amount: 3},
+                            {title: "potatoes", amount: 5},
+                            {title: "carrot", amount: 1},
+                        ]
+                    }
+                },
+                {
+                    name: "Jennifer",
+                    age: 78,
+                    favoriteDish: {
+                        title: "sushi",
+                        ingredients: [
+                            {title: "fish", amount: 1},
+                            {title: "rise", amount: 0.5}
+                        ]
+                    }
+                },
+            ]
+        }
+    };
+
+    let manFullCopy = {...man,
+        mother: {...man.mother, work: {...man.mother.work},
+            parents: man.mother.parents.map(e => ({...e,
+                favoriteDish: {...e.favoriteDish, ingredients: e.favoriteDish.ingredients.map(e => ({...e}))}}))}}
+
     const students: Array<StudentsType> = [
         {
             name: 'Helen',
@@ -69,7 +112,7 @@ const LessonSix = () => {
     }
     let addFr = AddFriends(students)
     console.log(AddFriends(students))
-
+    man.mother.parents[0].favoriteDish.ingredients[0].amount = 5
 
 
 
@@ -92,7 +135,11 @@ const LessonSix = () => {
                     Sorted + copied array: {sortedByName.map(e => e.name + ' ')}<br/>
                     100+ scores students: {filteredByScore.map(e => e.scores + ' ')}<br/>
                     Best 3 student after splice fn: {splicedBestStudents.map(e => e.name + ':' + e.scores + ' ')}<br/>
-                    Add friends fn test: {addFr[0].friends.map(e => e + ' ')}
+                    Add friends fn test: {addFr[0].friends.map(e => e + ' ')}<br/><br/>
+
+                    Big object deep copy test (if false copy are successful):
+                    {man.mother.parents[0].favoriteDish.ingredients[0].amount === manFullCopy.mother.parents[0].favoriteDish.ingredients[0].amount ?
+                    ' true' : ' false'}
 
                 </AccordionDetails>
             </Accordion>
