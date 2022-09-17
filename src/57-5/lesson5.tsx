@@ -70,7 +70,7 @@ const LessonFive = () => {
             <Container maxWidth="sm" style={{padding: '20px'}} >
                 <Accordion>
                     <AccordionSummary>
-                        <Typography><h3>JS_#05 2022-08-18 </h3></Typography>
+                        <Typography><h3>JS_#05 native JS </h3></Typography>
                     </AccordionSummary>
                     <AccordionDetails>
 
