@@ -10,6 +10,7 @@ type propsType = {
 }
 
 const Block = (props: propsType) => {
+
     let postContainerStyle = `${s.post_container}`
     let postBodyStyle = `${s.post_body__container}`
     let avatarStyle = `${s.post_avatar}`

@@ -96,7 +96,7 @@ const LessonSix = () => {
 
     let splicedBestStudents = [...students]
     splicedBestStudents = splicedBestStudents.sort((a, b) => a.scores - b.scores).reverse().splice(0, 3)
-    console.log(splicedBestStudents)
+    // console.log(splicedBestStudents)
 
     type StudentsType = {
         name: string
@@ -111,7 +111,7 @@ const LessonSix = () => {
         return(students.map(e => e ? {...e, friends: students.map(e => e.name).filter(n => n!== e.name)} : e ))
     }
     let addFr = AddFriends(students)
-    console.log(AddFriends(students))
+    // console.log(AddFriends(students))
     man.mother.parents[0].favoriteDish.ingredients[0].amount = 5
 
 
@@ -120,7 +120,7 @@ const LessonSix = () => {
         <Container maxWidth="sm" style={{padding: '20px'}}>
             <Accordion>
                 <AccordionSummary>
-                    <Typography><h3>JS_#06 native JS </h3></Typography>
+                    <Typography>JS_#06 native JS </Typography>
                 </AccordionSummary>
                 <AccordionDetails>
 

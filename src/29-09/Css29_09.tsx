@@ -16,7 +16,7 @@ const Css29_09 = () => {
         <Container maxWidth="sm" style={{padding: '20px'}}>
             <Accordion>
                 <AccordionSummary>
-                    <Typography><h3>CSS 29-09-22 </h3></Typography>
+                    <Typography>CSS 29-09-22 </Typography>
                 </AccordionSummary>
                 <AccordionDetails>
 
