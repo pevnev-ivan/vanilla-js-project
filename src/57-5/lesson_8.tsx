@@ -63,7 +63,7 @@ export function getSquarePositiveIntegers(array: Array<number>): Array<number> {
 }
 
 // 6. Функция принимает параметром целое не отрицательное число N и возвращает сумму всех чисел от 0 до N включительно
-
+// Без перебора
 export function sumFirstNumbers(N: number): number {
     if (N === 0) return 0
     let sum = 0;
